@@ -1,0 +1,41 @@
+{
+  "name": "postcss-qute",
+  "version": "0.0.9",
+  "description": "Provides saas like markup, color-mod function, custom @import resolvers and theme support",
+  "type": "module",
+  "main": "lib/index.cjs.js",
+  "module": "lib/index.esm.js",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "mocha",
+    "build": "rollup -c rollup.config.js"
+  },
+  "keywords": [
+    "qute",
+    "qutejs",
+    "postcss",
+    "plugin"
+  ],
+  "author": "Bogdan Stefanescu <bogdan@quandora.com>",
+  "license": "MIT",
+  "dependencies": {
+    "postcss": "^7.0.32",
+    "postcss-advanced-variables": "^3.0.1",
+    "postcss-atroot": "^0.1.3",
+    "postcss-color-mod-function": "^3.0.3",
+    "postcss-extend-rule": "^3.0.0",
+    "postcss-nested": "^4.2.3",
+    "postcss-property-lookup": "^2.0.0",
+    "resolve": "^1.17.0"
+  },
+  "devDependencies": {
+    "rollup": "^2.26.9",
+    "rollup-plugin-node-builtins": "^2.1.2",
+    "@rollup/plugin-commonjs": "^15.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^9.0.0",
+    "mocha": "^8.1.3"
+  }
+}
