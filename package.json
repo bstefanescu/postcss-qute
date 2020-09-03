@@ -1,6 +1,6 @@
 {
   "name": "postcss-qute",
-  "version": "0.0.9",
+  "version": "0.9.0",
   "description": "Provides saas like markup, color-mod function, custom @import resolvers and theme support",
   "type": "module",
   "main": "lib/index.cjs.js",
