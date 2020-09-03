@@ -1,7 +1,8 @@
 # postcss-qute
 PostCss plugin which provides SAAS like markup, color-mod function, custom @import resolvers and theme support
 
-https://travis-ci.com/bstefanescu/postcss-qute.svg?branch=master
+[![Build Status](https://travis-ci.com/bstefanescu/postcss-qute.svg?branch=master)](https://travis-ci.com/bstefanescu/postcss-qute)
+
 
 # Plugins
 
