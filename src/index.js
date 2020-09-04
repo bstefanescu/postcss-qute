@@ -87,9 +87,9 @@ function MaterialTheme(theme, cwd) {
     this.package = findPackageDir(this.cwd);
     if (!this.package) throw new Error('No package.json was found from '+ this.cwd);
     this.themesDirs = [];
+    this.themeDir = null;
     this.addThemesDir(this.package);
     this.addThemesDir(path.join(this.package, 'node_modules', '@qutejs', 'material'));
-    if (!this.themesDirs.length) throw new Error('No themes directories found in the current package context: '+ this.package);
     this.setTheme(theme || 'default');
 }
 MaterialTheme.prototype = {
@@ -116,8 +116,14 @@ MaterialTheme.prototype = {
     },
     resolve(importId, cwd) {
         if (importId === '%theme') {
+            if (!this.themeDir) {
+                throw new Error('Could not import theme: No themes directory was found in the project context');
+            }
             return path.join(this.themeDir, 'index.css');
         } else if (importId.startsWith('%theme/')) {
+            if (!this.themeDir) {
+                throw new Error('Could not import theme: No themes directory was found in the project context');
+            }
             return path.join(this.themeDir, importId.substring('%theme'.length));
         } else {
             return null;
